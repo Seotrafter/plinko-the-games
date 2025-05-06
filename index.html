@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beleef spannende Plinko-spellen en geniet van de ultieme speelervaring op Plinko The Games.">
+    <meta name="keywords" content="Plinko, spelletjes, entertainment, online spel, strategie">
+    <meta name="author" content="Plinko The Games">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Plinko The Games - Spannende Plinko Spellen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">Plinko The Games</a>
+                <ul class="menu">
+                    <li><a href="#about">Over Ons</a></li>
+                    <li><a href="#products">Producten</a></li>
+                    <li><a href="#testimonials">Beoordelingen</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="cart-icon">
+                        <a href="#cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+   <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <p>Product succesvol aan winkelwagen toegevoegd!</p>
+            <button id="close-popup" class="btn">OK</button>
+        </div>
+    </div>
+    <div id="cart-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Uw Winkelwagen</h2>
+            <ul id="cart-items" style="list-style: none; padding: 0; margin-bottom: 1rem;"></ul>
+            <button id="checkout-button" class="btn">Afrekenen</button>
+            <button id="close-cart-popup" class="btn">Sluiten</button>
+        </div>
+    </div>
+
+    <div id="image-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <img id="popup-image" src="" alt="Gedetailleerde Weergave" style="max-width: 100%; height: auto;">
+            <button id="close-image-popup" class="btn">Sluiten</button>
+        </div>
+    </div>
+
+    <section id="hero" class="hero">
+            <div class="container">
+                <h1>Plinko Tafelspellen</h1>
+                <p>Kies een spel en begin direct met spelen!</p>
+                <a href="#products" class="btn">Bekijk Nu</a>
+            </div>
+        </section>
+<section id="about" class="about">
+    <div class="container">
+        <h2>Over Ons</h2>
+        <p>Plinko The Games is een toonaangevend merk dat plezier en strategie samenbrengt om een onvergetelijke speelervaring te creëren. Onze Plinko-spellen zijn perfect voor zowel individueel als groepsspel.</p>
+        <p>Onze producten worden vervaardigd met hoogwaardige materialen voor een lange levensduur en duurzaamheid. Elk spel is zorgvuldig ontworpen met aandacht voor detail en gebruiksvriendelijkheid, ideaal voor alle leeftijden. Onze spellen stimuleren niet alleen entertainment, maar ook strategisch denken en sociale interactie.</p>
+        <p>Bij Plinko The Games staat klanttevredenheid centraal. Dankzij ons brede aanbod aan spellen vindt iedereen iets wat bij hen past. Onze innovatieve ontwerpen en concurrerende prijzen maken ons uniek in de markt.</p>
+        <p>Wij streven ernaar om ons continu te verbeteren door feedback van onze spelers op te nemen. Haal de nieuwste generatie entertainment in huis en beleef onvergetelijke momenten met Plinko The Games!</p>
+    </div>
+</section>
+
+   <section id="products" class="products">
+    <div class="container">
+        <h2>Onze Producten</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="assets/images/product1.jpg" alt="Plinko Pro">
+                <h3>Plinko Pro</h3>
+                <p>Professioneel ontworpen Plinko-spel voor de ultieme ervaring.</p>
+                <button class="btn add-to-cart" data-product="Plinko Pro">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product2.jpg" alt="Plinko Basic">
+                <h3>Plinko Basic</h3>
+                <p>Betaalbare Plinko-set geschikt voor alle leeftijden.</p>
+                <button class="btn add-to-cart" data-product="Plinko Basic">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product3.jpg" alt="Plinko Kids">
+                <h3>Plinko Kids</h3>
+                <p>Speciaal ontworpen voor kinderen.</p>
+                <button class="btn add-to-cart" data-product="Plinko Kids">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product4.jpg" alt="Plinko Compact">
+                <h3>Plinko Compact</h3>
+                <p>Compact en draagbaar ontwerp voor onderweg.</p>
+                <button class="btn add-to-cart" data-product="Plinko Compact">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product5.jpg" alt="Plinko Deluxe">
+                <h3>Plinko Deluxe</h3>
+                <p>Deluxe versie met hoogwaardige materialen.</p>
+                <button class="btn add-to-cart" data-product="Plinko Deluxe">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product6.jpg" alt="Plinko Travel">
+                <h3>Plinko Travel</h3>
+                <p>Perfect voor reizigers.</p>
+                <button class="btn add-to-cart" data-product="Plinko Travel">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product7.jpg" alt="Plinko Classic">
+                <h3>Plinko Classic</h3>
+                <p>Tijdloos design voor eindeloos plezier.</p>
+                <button class="btn add-to-cart" data-product="Plinko Classic">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product8.jpg" alt="Plinko Family">
+                <h3>Plinko Family</h3>
+                <p>Ontworpen voor gezellig familieplezier.</p>
+                <button class="btn add-to-cart" data-product="Plinko Family">Toevoegen aan winkelwagen</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/product9.jpg" alt="Plinko Sport">
+                <h3>Plinko Sport</h3>
+                <p>Voor sportliefhebbers.</p>
+                <button class="btn add-to-cart" data-product="Plinko Sport">Toevoegen aan winkelwagen</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+        <h2>Galerij</h2>
+            <div class="gallery-grid">
+                <img src="assets/images/gallery2.jpg" alt="Galeri Görsel 1">
+                <img src="assets/images/gallery1.jpg" alt="Galeri Görsel 2">
+                <img src="assets/images/gallery3.jpg" alt="Galeri Görsel 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Beoordelingen</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/images/user1.jpg" class="card-img-top" alt="User 1">
+                        <div class="card-body">
+                            <p class="card-text">"Plinko is een geweldig gezelschapsspel! We genieten er enorm van."</p>
+                            <cite class="d-block text-end">- Jan D.</cite>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/images/user2.jpg" class="card-img-top" alt="User 2">
+                        <div class="card-body">
+                            <p class="card-text">"Mijn kinderen zijn dol op dit spel. Elke dag spelen ze ermee!"</p>
+                            <cite class="d-block text-end">- Lisa V.</cite>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/images/user3.jpg" class="card-img-top" alt="User 3">
+                        <div class="card-body">
+                            <p class="card-text">"Goede kwaliteit en mooi design. Ik raad het iedereen aan!"</p>
+                            <cite class="d-block text-end">- Peter S.</cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <section id="faq" class="faq">
+    <div class="container">
+        <h2>Veelgestelde Vragen</h2>
+        <div class="faq-columns">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 onclick="toggleAnswer(this)">Waarom is Plinko een geweldige keuze voor gezinnen?</h3>
+                    <p class="answer">Plinko is een leuke en interactieve manier om samen tijd door te brengen.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleAnswer(this)">Zijn de producten eenvoudig schoon te maken?</h3>
+                    <p class="answer">Ja, onze producten zijn gemaakt van duurzame materialen en gemakkelijk schoon te maken.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleAnswer(this)">Hoe lang duurt de levering?</h3>
+                    <p class="answer">De levertijd varieert tussen 2-4 werkdagen binnen Nederland.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleAnswer(this)">Is de installatie van de producten ingewikkeld?</h3>
+                    <p class="answer">Nee, onze producten zijn ontworpen voor eenvoudige installatie en worden geleverd met instructies.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 onclick="toggleAnswer(this)">Is Plinko een geschikt cadeau?</h3>
+                    <p class="answer">Ja, Plinko is een fantastisch cadeau voor alle leeftijden.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <form action="submit" method="post">
+            <input type="text" name="name" placeholder="Uw Naam" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="message" placeholder="Uw Bericht" required></textarea>
+            <button type="submit" class="btn">Versturen</button>
+        </form>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container footer-columns">
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p><strong>Telefoon:</strong> +31612841814</p>
+            <p><strong>E-mail:</strong> info@plinko-the-games.com</p>
+            <p><strong>Adres:</strong> Oudegracht 207, 3511 NH Utrecht, Netherlands</p>
+        </div>
+        <div class="footer-column">
+            <h3>Pagina's</h3>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacybeleid</a></li>
+                <li><a href="terms-of-service.html">Gebruiksvoorwaarden</a></li>
+                <li><a href="cookies-policy.html">Cookiebeleid</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Sociale Media</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Plinko The Games. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+<div class="cookie-banner" id="cookie-banner">
+    <p>Deze site maakt gebruik van cookies. Voor meer informatie kunt u onze <a href="cookies-policy.html">Cookiebeleid</a> pagina bekijken.</p>
+    <button id="accept-cookies">Accepteren</button>
+</div>
+
+<div id="order-popup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <h2>Bestelinformatie</h2>
+        <form id="order-form">
+            <label for="name">Uw Naam:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="address">Uw Adres:</label>
+            <input type="text" id="address" name="address" required><br><br>
+            <label for="phone">Telefoon:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <button type="submit" class="btn">Bestelling Voltooien</button>
+            <button type="button" id="close-order-popup" class="btn">Sluiten</button>
+        </form>
+    </div>
+</div>
+    <script>
+        document.getElementById('accept-cookies').addEventListener('click', function() {
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    </script>
+    <script src="assets/scripts/scripts.js"></script>
+    <script>
+        let cartCount = 0;
+        const cartIcon = document.querySelector('.cart-icon i');
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                cartIcon.textContent = cartCount;
+            });
+        });
+    </script>
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('close-popup');
+        const cartPopup = document.getElementById('cart-popup');
+        const cartItems = document.getElementById('cart-items');
+        const closeCartPopup = document.getElementById('close-cart-popup');
+        const checkoutButton = document.getElementById('checkout-button');
+        const orderPopup = document.getElementById('order-popup');
+        const closeOrderPopup = document.getElementById('close-order-popup');
+        const orderForm = document.getElementById('order-form');
+        const cartIcon = document.querySelector('.cart-icon');
+
+        let cart = [];
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-product');
+                cart.push(productName);
+                popup.style.display = 'block';
+            });
+        });
+
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        cartIcon.addEventListener('click', () => {
+            cartItems.innerHTML = '';
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<li>Sepetiniz boş.</li>';
+            } else {
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    cartItems.appendChild(li);
+                });
+            }
+            cartPopup.style.display = 'block';
+        });
+
+        closeCartPopup.addEventListener('click', () => {
+            cartPopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === cartPopup) {
+                cartPopup.style.display = 'none';
+            }
+        });
+
+        checkoutButton.addEventListener('click', () => {
+            cartPopup.style.display = 'none';
+            orderPopup.style.display = 'block';
+        });
+
+        closeOrderPopup.addEventListener('click', () => {
+            orderPopup.style.display = 'none';
+        });
+
+        orderForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Siparişiniz alındı!');
+            cart = [];
+            orderPopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === orderPopup) {
+                orderPopup.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
